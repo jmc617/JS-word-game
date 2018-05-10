@@ -1,0 +1,25 @@
+.keys {
+  background-color: $main-button-color;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif;
+}
+#new-word-btn {
+  display: block;
+  margin: 5px auto;
+  background-color: $main-button-color;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif;
+}
+#word-submit {
+  margin: 5px;
+  background-color: $main-button-color;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif;
+}

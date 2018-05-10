@@ -17,7 +17,7 @@ guessNum.innerHTML = chances
 // word/hints
 var wordArray = []
 var hintArray = []
-var prizeArray = [100,200,300,600,700,100,000,1,15,60,90]
+var prizeArray = [100,200,300,400,500,600,700,800,900,50,90]
 
 function Word (word,hint){
   wordArray.push(word)
@@ -25,15 +25,15 @@ function Word (word,hint){
 }
 
 var one = new Word('hello','greeting')
-var two = new Word('goodbye','leaving greeting')
+var two = new Word('goodbye','leaving message')
 var three = new Word('shoe','wear on feet')
 var four = new Word('water','what rain is made of')
-var five = new Word('snow','frozen water')
-var six = new Word('six','sixHint')
-var seven = new Word('seven','sevenHint')
-var eight = new Word('eight','eightHint')
-var nine = new Word('nine','nineHint')
-var ten = new Word('ten','tenHint')
+var five = new Word('ice','frozen water')
+var six = new Word('cat','goes \"meow\"')
+var seven = new Word('dog','goes \"woof\"')
+var eight = new Word('jessica','creator\'s name')
+var nine = new Word('food','what you eat')
+var ten = new Word('zero','first index number of array')
 
 // random number for choosing word/clues
 function random(){
@@ -59,25 +59,26 @@ function dash(){
   }
 dash()
 // places clue on page
-clue.innerHTML = "clue: " + hintArray[randomNum]
+clue.innerHTML = hintArray[randomNum]
 
-// NEW WORD referesh button function(clean up))
-
+// refresh page with new word)
 function refresh(){
   guessNum.innerHTML = chances
   usedLtrs.innerHTML = ''
+  // refresh new prize
+  prizeChosen = prizeArray[randomNum]
+  prize.innerHTML = parseInt(prizeChosen)
+
 
   function random(){
     return (Math.floor(Math.random()*10))
   }
   randomNum = random()
 
-  console.log(wordArray[randomNum]+hintArray[randomNum]);
   // word split into array for comparison
   splitWord = (wordArray[randomNum].split(''));
   splitWordCompare = (wordArray[randomNum].split(''));
-  // example of array joined back into word
-  console.log(wordArray[randomNum].split('').join(''));
+
   // replaces letters
   function dash(){
       for (let i = 0; i < splitWord.length; i++) {
@@ -87,7 +88,7 @@ function refresh(){
     }
 dash()
   // places clue on page
-  clue.innerHTML = "clue: " + hintArray[randomNum]
+  clue.innerHTML = hintArray[randomNum]
 }
 
 // keyboard start
@@ -110,7 +111,7 @@ for (var i = 0; i < alphabet.length; i++) {
       guessNum.innerHTML =  chances
 
       if (parseInt(guessNum.innerText) == 0) {
-        alert('Game Over! Click OK to play again')
+        alert('Game Over! Final Score:'+prizewon.innerHTML+'. Click OK to play again')
         prizeWon.innerHTML = 0
         chances = 5
         refresh()
@@ -141,7 +142,7 @@ wordSubmit.addEventListener('click',function(){
       guessNum.innerHTML = chances
 
       if (parseInt(guessNum.innerText) == 0) {
-          alert('Game Over! Click OK to play again')
+          alert('Game Over! Final Score:'+prizewon.innerHTML+'. Click OK to play again')
           prizeWon.innerHTML = 0
           chances = 5
           refresh()

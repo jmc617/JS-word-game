@@ -1,3 +1,62 @@
+* {
+  text-align: center;
+  margin: 5px auto; }
 
+.keys {
+  background-color: #04f765;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif; }
+
+#new-word-btn {
+  display: block;
+  margin: 5px auto;
+  background-color: #04f765;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif; }
+
+#word-submit {
+  margin: 5px;
+  background-color: #04f765;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif; }
+
+#guess-num {
+  padding: 10px;
+  border: inset 4px #04f765;
+  display: inline-block; }
+
+#clue {
+  padding: 10px;
+  border: inset 4px #04f765;
+  display: inline-block; }
+
+#word-dash {
+  padding: 10px;
+  border: inset 4px #04f765;
+  display: inline-block; }
+
+#prizewon {
+  padding: 10px;
+  border: inset 4px #04f765;
+  display: inline-block; }
+
+#used-ltrs {
+  padding: 10px;
+  border: inset 4px #04f765;
+  display: inline-block;
+  height: 15px; }
+
+#prize {
+  padding: 10px;
+  border: inset 4px #04f765;
+  display: inline-block;
+  height: 15px; }
 
 /*# sourceMappingURL=main.css.map */
