@@ -1,0 +1,37 @@
+#chancestext {
+  grid-column: 1/3;
+}
+#guess-num {
+  padding: 10px;
+  box-shadow: $value-shadow;
+  grid-column: 1/3;
+}
+#cluetext {
+  grid-column: 1/2;
+}
+#clue {
+  grid-column: 2/3;
+  padding: 10px;
+  box-shadow: $value-shadow;
+  text-transform: lowercase;
+}
+#title{
+  grid-column: 1/3;
+}
+#word-dash {
+  padding: 10px;
+  box-shadow: $value-shadow;
+}
+#prizewon {
+  padding: 10px;
+  box-shadow: $value-shadow;
+}
+#used-ltrs {
+  padding: 10px;
+  box-shadow: $value-shadow;
+  height: 15px;
+}
+#prize {
+  padding: 10px;
+  box-shadow: $value-shadow;
+}

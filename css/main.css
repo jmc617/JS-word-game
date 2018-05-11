@@ -1,3 +1,139 @@
+* {
+  text-align: center;
+  margin: 5px auto;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  font-family: "Rubik", sans-serif; }
 
+#wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  margin: 0 auto; }
+
+.keys {
+  background-color: #04f765;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: inherit;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s; }
+
+.keys:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); }
+
+#keyboard-wrapper {
+  grid-column: 1/3; }
+
+#new-word-btn {
+  display: block;
+  margin: 5px auto;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: inherit;
+  grid-column: 1/3; }
+
+#rules-btn {
+  display: block;
+  margin: 5px auto;
+  background-color: #04f765;
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-family: inherit;
+  grid-column: 1/3; }
+
+#word-submit {
+  margin: 5px;
+  background-color: #04f765;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: inherit; }
+
+#cluebtn {
+  width: 200px;
+  grid-column: 1/3;
+  margin: 5px auto;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: inherit;
+  display: inline-block; }
+
+#chancestext {
+  grid-column: 1/3; }
+
+#guess-num {
+  padding: 10px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.27);
+  grid-column: 1/3; }
+
+#cluetext {
+  grid-column: 1/2; }
+
+#clue {
+  grid-column: 2/3;
+  padding: 10px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.27);
+  text-transform: lowercase; }
+
+#title {
+  grid-column: 1/3; }
+
+#word-dash {
+  padding: 10px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.27); }
+
+#prizewon {
+  padding: 10px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.27); }
+
+#used-ltrs {
+  padding: 10px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.27);
+  height: 15px; }
+
+#prize {
+  padding: 10px;
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.27); }
+
+#modal1 {
+  background-color: #04f765;
+  width: 50%;
+  grid-column: 1/3;
+  position: absolute;
+  margin: 15% 25%;
+  z-index: 1;
+  display: none;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+
+#m1-para {
+  background-color: white;
+  width: 85%;
+  padding: 10px 10px; }
+
+#m2-para {
+  background-color: white;
+  width: 85%;
+  padding: 10px 10px; }
+
+#m1-heading {
+  background-color: white;
+  width: 85%; }
+
+#m1-closebtn {
+  margin: 5px auto;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: inherit; }
 
 /*# sourceMappingURL=main.css.map */
