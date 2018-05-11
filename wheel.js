@@ -15,44 +15,33 @@ var m1CloseBtn = document.getElementById('m1-closebtn')
 var rulesBtn = document.getElementById('rules-btn')
 var m1Heading = document.getElementById('m1-heading')
 var m1para = document.getElementById('m1-para')
-var m2para = document.getElementById('m2-para')
+var p1 = document.getElementById('p1')
+var p2 = document.getElementById('p2')
+var p3 = document.getElementById('p3')
+var m2CloseBtn = document.getElementById('m2-closebtn')
 
 function openModal1() {
   setTimeout(function() {
     modal1.style.display = "block";
-  }, 2000);
+  }, 1000);
 }
 openModal1()
-// close modal button
+// close modal buttons
 m1CloseBtn.addEventListener('click', function(){
   modal1.style.display = 'none'
-  modal1.removeChild(m2para);
+})
+m2CloseBtn.addEventListener('click', function(){
+  modal2.style.display = 'none'
 })
 // opens modal with rules
 rulesBtn.addEventListener('click', function() {
     modal1.style.display = "block";
     m1Heading.style.display = 'none';
 })
-function winnerModal(){
-    m1Heading.style.display = 'none';
-    m1para.style.display = 'none';
-    modal1.style.display = "block";
-    modal1.style.marginTop = '40%';
-    m1CloseBtn.insertAdjacentHTML( 'afterend','<p id=\'m2-para\'>Good job! Current Score:'+prizewon.innerHTML+'</p>')
-}
-function loserModal(){
-    m1Heading.style.display = 'none';
-    m1para.style.display = 'none';
-    modal1.style.display = "block";
-    modal1.innerHTML += ' <p id=\'m2-para\'>Game Over! Final Score:'+prizewon.innerHTML+'. Click close to play again</p>'
-}
+// opens modal with try again
 function tryAgainModal(){
-    m1Heading.style.display = 'none';
-    m1para.style.display = 'none';
-    modal1.style.display = "block";
-    modal1.innerHTML += ' <p id=\'m2-para\'>Try again</p>'
+  modal2.style.display = 'block';
 }
-
 newWordBtn.addEventListener('click', refresh)
 
 var chances = 5
@@ -164,8 +153,7 @@ for (var i = 0; i < alphabet.length; i++) {
       guessNum.innerHTML =  chances
 
       if (parseInt(guessNum.innerText) == 0) {
-        // alert('Game Over! Final Score:'+prizewon.innerHTML+'. Click close to play again')
-        loserModal()
+        alert('Game Over! Final Score: '+prizewon.innerHTML+'. Click OK to play again')
         prizeWon.innerHTML = 0
         chances = 5
         refresh()
@@ -177,8 +165,7 @@ for (var i = 0; i < alphabet.length; i++) {
         wordDash.innerHTML = splitWord.join('')
 
           if (wordDash.innerHTML == splitWordCompare.join('')) {
-            // alert('good job!');
-            winnerModal()
+            alert('Good Job! Current Score: '+prizewon.innerHTML);
             prizeWon.innerHTML = ((parseInt(prizeWon.innerText)) + (parseInt(prize.innerText)))
             refresh()
           }
@@ -187,10 +174,10 @@ for (var i = 0; i < alphabet.length; i++) {
     })
   }
 // keyboard end
+//word submit begin
 wordSubmit.addEventListener('click',function(){
   if (wordInput.value == splitWordCompare.join('')){
-    // alert('good job!')
-    winnerModal()
+    alert('Good Job! Current Score: '+prizewon.innerHTML)
     prizeWon.innerHTML = ((parseInt(prizeWon.innerText)) + (parseInt(prize.innerText)))
     refresh()
     wordInput.value = ''
@@ -199,13 +186,11 @@ wordSubmit.addEventListener('click',function(){
       guessNum.innerHTML = chances
 
       if (parseInt(guessNum.innerText) == 0) {
-          // alert('Game Over! Final Score:'+prizewon.innerHTML+'. Click OK to play again')
-          loserModal()
+          alert('Game Over! Final Score: '+prizewon.innerHTML+'. Click OK to play again')
           prizeWon.innerHTML = 0
           chances = 5
           refresh()
         } else {
-          // alert('try again')
           tryAgainModal()
         }
         }
