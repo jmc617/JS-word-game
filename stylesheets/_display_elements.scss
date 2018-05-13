@@ -35,3 +35,8 @@
   padding: 10px;
   box-shadow: $value-shadow;
 }
+#word-input {
+  border-radius: 9999em;
+  border-color: $main-button-color;
+  height: 90%;
+}

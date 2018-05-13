@@ -1,14 +1,71 @@
 * {
   text-align: center;
   margin: 5px auto;
-  font-family: 'Rubik', sans-serif;
   text-transform: uppercase;
   font-family: $font
 }
 #wrapper {
-  width: 100%;
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
   margin: 0 auto;
+}
+@media all and (min-width:481px) {
+  #wrapper {
+    width: 80%;
+    #cluetext {
+      grid-column: 1/3;
+      margin: 0 auto;
+      align-content: center;
+    }
+    #currentword {
+      grid-column: 1/3;
+      margin: 0 auto;
+      align-content: center;
+    }
+    #worth {
+      grid-column: 1/3;
+      margin: 0 auto;
+      align-content: center;
+    }
+    #current {
+      grid-column: 1/3;
+      margin: 0 auto;
+      align-content: center;
+    }
+    #used {
+      grid-column: 1/3;
+      margin: 0 auto;
+      align-content: center;
+    }
+    #clue {
+      grid-column: 1/3;
+      padding: 10px;
+      box-shadow: $value-shadow;
+      text-transform: lowercase;
+    }
+    #word-dash {
+      grid-column: 1/3;
+      padding: 10px;
+      box-shadow: $value-shadow;
+    }
+    #prizewon {
+      grid-column: 1/3;
+      padding: 10px;
+      box-shadow: $value-shadow;
+    }
+    #used-ltrs {
+      grid-column: 1/3;
+      padding: 10px;
+      box-shadow: $value-shadow;
+      height: 15px;
+    }
+    #prize {
+      grid-column: 1/3;
+      padding: 10px;
+      box-shadow: $value-shadow;
+      text-align: center;
+    }
+  }
 }
